@@ -35,7 +35,7 @@ export default function Navbar() {
   ];
 
   const productLinks = [
-    { name: "Wardrobe", link: "/wardrobe" },
+    { name: "Wardrobe Design", link: "/wardrobe" },
     { name: "Dressing Unit", link: "/dressing" },
     { name: "TV Unit", link: "/tvunit" },
     { name: "Sofa Set", link: "/sofaset" },

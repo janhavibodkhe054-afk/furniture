@@ -10,26 +10,23 @@ import {
 export default function Footer() {
   return (
     <footer className="relative w-full text-white overflow-hidden">
-
       {/* ===== BACKGROUND ===== */}
       <div className="absolute inset-0 bg-black">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-[#1a1a1a] to-[#2c1f19] opacity-90"></div>
       </div>
 
       {/* ===== MAIN CONTENT ===== */}
-      <div className="relative z-10 max-w-7xl mx-auto 
+      <div
+        className="relative z-10 max-w-7xl mx-auto 
       px-4 sm:px-6 md:px-10 lg:px-16 xl:px-20
       py-12 sm:py-14 lg:py-20
       grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 
-      gap-10 lg:gap-14">
-
+      gap-10 lg:gap-14"
+      >
         {/* ===== BRAND ===== */}
         <div>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-wide">
-            VAIBHAV{" "}
-            <span className="text-[#D6AD60]">
-              FURNITURE
-            </span>
+            VAIBHAV <span className="text-[#D6AD60]">FURNITURE</span>
           </h2>
 
           <p className="mt-4 text-gray-400 text-sm sm:text-base leading-relaxed">
@@ -89,21 +86,25 @@ export default function Footer() {
 
           <ul className="space-y-3 text-gray-400 text-sm sm:text-base">
             {[
-              "Modular Kitchen",
-              "Wardrobe Design",
-              "Custom Furniture",
-              "Interior Design",
-              "Office Furniture",
+              { name: "wardrobe Design", path: "/wardrobe" },
+              { name: "Dressing Unit", path: "/dressing" },
+              { name: "TV Unit", path: "/tvunit" },
+              { name: "Sofa Set", path: "/sofaset" },
+              { name: "Dining Table", path: "/dinning" },
+              { name: "Bed Room", path: "/bedroom" },
             ].map((service, i) => (
-              <li
-                key={i}
-                className="hover:text-[#D6AD60] transition hover:translate-x-1 cursor-pointer"
-              >
-                → {service}
+              <li key={i}>
+                <Link
+                  to={service.path}
+                  className="block hover:text-[#D6AD60] transition hover:translate-x-1 cursor-pointer"
+                >
+                  → {service.name}
+                </Link>
               </li>
             ))}
           </ul>
         </div>
+        
 
         {/* ===== CONTACT ===== */}
         <div>
@@ -113,34 +114,56 @@ export default function Footer() {
           </h3>
 
           <div className="space-y-4 text-gray-400 text-sm sm:text-base">
-
-            <a href="#" className="flex items-start gap-3 hover:text-[#D6AD60] transition">
+            <a
+              href="#"
+              className="flex items-start gap-3 hover:text-[#D6AD60] transition"
+            >
               <FaMapMarkerAlt className="mt-1 text-[#A47551]" />
-              <p> Sr. No. 136/10, Urulidevachi Saswad Hadapsar Road, 
-      Near Zhooms Hotel, Pune - 412308</p>
+              <p>
+                {" "}
+                Sr. No. 136/10, Urulidevachi Saswad Hadapsar Road, Near Zhooms
+                Hotel, Pune - 412308
+              </p>
             </a>
 
-            <a href="#" className="flex items-start gap-3 hover:text-[#D6AD60] transition">
+            <a
+              href="#"
+              className="flex items-start gap-3 hover:text-[#D6AD60] transition"
+            >
               <FaMapMarkerAlt className="mt-1 text-[#A47551]" />
-              <p>Ground Floor, C-78/6, Kolvihire Road, 
-      Soma Nu Labs, Jejuri MIDC, Pune - 412303</p>
+              <p>
+                Ground Floor, C-78/6, Kolvihire Road, Soma Nu Labs, Jejuri MIDC,
+                Pune - 412303
+              </p>
             </a>
 
-            <a href="#" className="flex items-start gap-3 hover:text-[#D6AD60] transition">
+            <a
+              href="#"
+              className="flex items-start gap-3 hover:text-[#D6AD60] transition"
+            >
               <FaMapMarkerAlt className="mt-1 text-[#A47551]" />
-              <p> Vaibhav Furniture, Sr No: 9 Adsul Mala Urulidevachi, Shivram Nagar near Pushpak Rooftop, Pune - 412308</p>
+              <p>
+                {" "}
+                Vaibhav Furniture, Sr No: 9 Adsul Mala Urulidevachi, Shivram
+                Nagar near Pushpak Rooftop, Pune - 412308
+              </p>
             </a>
 
-            <a href="tel:+917350605454" className="flex items-center gap-3 hover:text-[#D6AD60] transition">
+            <a
+              href="tel:+917350605454"
+              className="flex items-center gap-3 hover:text-[#D6AD60] transition"
+            >
               <FaPhoneAlt className="text-[#A47551]" />
               <span>+91 7350605454</span>
             </a>
 
-            <a href="tel:+917900771111" className="flex items-center gap-3 hover:text-[#D6AD60] transition">
+            <a
+              href="tel:+917900771111"
+              className="flex items-center gap-3 hover:text-[#D6AD60] transition"
+            >
               <FaPhoneAlt className="text-[#A47551]" />
               <span>+91 7900771111</span>
             </a>
-
           </div>
         </div>
       </div>
@@ -149,32 +172,32 @@ export default function Footer() {
       <div className="relative z-10 h-[1px] bg-gradient-to-r from-transparent via-[#D6AD60] to-transparent mx-6"></div>
 
       {/* ===== BOTTOM BAR ===== */}
-      <div className="relative z-10 bg-black border-t border-[#D6AD60]/20 
-      text-gray-500 py-4 text-xs sm:text-sm px-4 sm:px-6 md:px-10">
-
-        <div className="max-w-7xl mx-auto 
+      <div
+        className="relative z-10 bg-black border-t border-[#D6AD60]/20 
+      text-gray-500 py-4 text-xs sm:text-sm px-4 sm:px-6 md:px-10"
+      >
+        <div
+          className="max-w-7xl mx-auto 
         flex flex-col sm:flex-row 
-        items-center justify-between gap-2">
-
+        items-center justify-between gap-2"
+        >
           <p>
             © {new Date().getFullYear()} All rights reserved | Vaibhav Furniture
           </p>
 
           <p>
-  Designed & Developed by{" "}
-  <a
-    href="https://www.hashgridtech.com"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-[#D6AD60] font-medium hover:underline transition"
-  >
-    Hashgrid Technologies Pvt. Ltd.
-  </a>
-</p>
-
+            Designed & Developed by{" "}
+            <a
+              href="https://www.hashgridtech.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#D6AD60] font-medium hover:underline transition"
+            >
+              Hashgrid Technologies Pvt. Ltd.
+            </a>
+          </p>
         </div>
       </div>
-
     </footer>
   );
 }
