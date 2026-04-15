@@ -9,11 +9,13 @@ import Testimonials from '../components/Home/Testimonials'
 import HeroConsultation from '../components/Home/HeroConsultation'
 import AboutSplitSection from '../components/Home/AboutSplitSection'
 import WhyChooseUs from '../components/Home/WhyChooseUs'
+import CircleStatsSection from '../components/Home/CircleStatsSection'
 
 const Home = () => {
   return (
     <div>
       <HeroSection/>
+      <CircleStatsSection/>
       <AboutSplitSection/>
       <SpazioSection/>
       <GallerySection/>

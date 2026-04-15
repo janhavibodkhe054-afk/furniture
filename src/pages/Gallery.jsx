@@ -2,7 +2,7 @@ import { useState } from "react";
 import { X } from "lucide-react";
 
 export default function GalleryPage() {
-  const images = Array.from({ length: 61 }, (_, i) => `/${i + 1}.jpeg`);
+  const images = Array.from({ length: 33 }, (_, i) => `/${i + 1}.jpeg`);
   const [selected, setSelected] = useState(null);
 
   return (
